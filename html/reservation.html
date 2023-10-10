@@ -3,37 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/reservation.css">
     <title>Cantine Scolaire ENC</title>
+   
 </head>
 <body>
-<div class="content">
-    <div class="bar">
-        <nav class="nav">
-          <a href="menuSemaine.html"><img src="/img/logo_enc.png" alt="Accueil" height="50px" width="50px"></a>
-            <ul> 
-              <li><a href="menuSemaine.html">Menu semaine</a></li>
-  
-              <li><a href="paiement.html">Paiement</a></li>
-  
-              <li><a href="reservation.html">Réservation</a></li>
-  
-              <li><a href="info.html">Informations</a></li>
-  
-              <li><a href="login.html">Compte</a></li>
-  
-              <li><a href="aide.html">Aide</a></li>
-               
-              <li class="deco" ><a class="active"href="index.html">Déconnexion</a></li>
-            </ul>
-        </nav>
-      </div>
 
+    <nav class="nav">
 
+        <ul> 
+            <li><a href="menuSemaine.html">Menu semaine</a></li>
+
+            <li><a href="paiement.html">Paiement</a></li>
+
+            <li><a href="reservation.html">Réservation</a></li>
+
+            <li><a href="info.html">Informations</a></li>
+
+            <li><a href="index.html">Compte</a></li>
+
+            <li><a href="aide.html">Aide</a></li>
+             
+            <li style="float:right"><a class="active"href="index.html">Déconnection</a></li>
+                
+        </ul>
+    </nav>
+
+    <div class="res">
+        <form id="reservation-form">
+    <label for="start">Reserver pour le:</label>
+
+    <input type="date" id="start" name="dateRes" min="2018-01-01" max="2024-12-31" />
+    <button type="submit" id="submit-button">Valider</button>
+    <p id="reservation-message" style="display: none;"></p>
+        </form>
+        
+</div>
 
     <footer>
 
     </footer>
-</div>
+
+
+
+    <script>// date du jour auto
+        document.addEventListener('DOMContentLoaded', function () {
+          
+          var dateInput = document.getElementById('start');
+      
+          
+          var currentDate = new Date().toISOString().split('T')[0];
+      
+         
+          dateInput.value = currentDate;
+        });
+      </script>
+
+<script>//affichage message res
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('reservation-form');
+      var dateInput = document.getElementById('start');
+      var messageElement = document.getElementById('reservation-message');
+  
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+  
+        
+        var selectedDate = dateInput.value;
+  
+        
+        messageElement.textContent = "Vous avez réservé pour le : " + selectedDate;
+        messageElement.style.display = 'block'; 
+      });
+    });
+  </script>
+  
+
+
 </body>
 </html>
