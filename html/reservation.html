@@ -82,5 +82,41 @@
   
 
 
+
+
+    <script>// date du jour auto
+        document.addEventListener('DOMContentLoaded', function () {
+          
+          var dateInput = document.getElementById('start');
+      
+          
+          var currentDate = new Date().toISOString().split('T')[0];
+      
+         
+          dateInput.value = currentDate;
+        });
+      </script>
+
+<script>//affichage message res
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('reservation-form');
+      var dateInput = document.getElementById('start');
+      var messageElement = document.getElementById('reservation-message');
+  
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); 
+  
+        
+        var selectedDate = dateInput.value;
+  
+        
+        messageElement.textContent = "Vous avez réservé pour le : " + selectedDate;
+        messageElement.style.display = 'block'; 
+      });
+    });
+  </script>
+  
+
+
 </body>
 </html>

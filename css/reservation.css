@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   
   /* Styles pour le formulaire */
@@ -75,4 +76,83 @@ button {
     font-size: 20px;
     color: #000000; 
   }
+=======
+
+  
+  /* Styles pour le formulaire */
+  .res {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 80px;
+    justify-content: center;
+    text-align: center; 
+    background-color: #fff;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    
+  }
+  
+ 
+  label {
+    display: block;
+    margin-bottom: 10px; 
+  }
+  
+  
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+  }
+  
+  
+  input[type="date"]:focus {
+    outline: none; 
+    border-color: #007BFF; 
+  }
+
+
+  /* Style pour le bouton Valider */
+button {
+    margin: auto;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: rgb(38, 140, 0); 
+    color: white; 
+    text-align: center;
+    padding: 14px 16px;
+    
+    border: none;
+    border-radius: 10%; 
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
+  }
+  
+  
+  button:hover {
+    background-color: rgb(38, 100, 0);
+  }
+  
+  
+  button:active {
+    background-color: rgb(38, 140, 0);
+    color: white;
+    border-radius: 10%;
+  
+  }
+  
+  #reservation-message {
+    display: none; 
+    text-align: center; 
+    margin-top: 10px; 
+    font-size: 20px;
+    color: #000000; 
+  }
+>>>>>>> d3cc5c3997256ffb93be3cd7b785753e192ca791
   
