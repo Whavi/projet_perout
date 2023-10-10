@@ -4,7 +4,21 @@ body{
 }
 
 nav{
-    padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  padding-left: 85px;
+
+}
+.nav img{
+  margin-right: 150px;
+
+}
+.deco{
+  margin-left: 150px;
+}
+.menuTable{
+  display: flex;
+  justify-content: center;
 }
 
 ul{

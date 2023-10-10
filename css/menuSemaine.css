@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+*
+.nav{
+padding-top: 8px;
+}
 
 .menuTable{
     padding-top: 20px;
