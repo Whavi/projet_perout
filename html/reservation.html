@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/reservation.css">
+   <script src="../js/reservation.js" defer></script>
     <title>Cantine Scolaire ENC</title>
    
 </head>
@@ -12,7 +13,7 @@
 <div class="content">
   <div class="bar">
     <nav class="nav">
-      <a href="menuSemaine.html"><img src="/img/logo_enc.png" alt="Accueil" height="50px" width="50px"></a>
+      <a href="menuSemaine.html"><img src="../img/logo_enc.png" alt="Accueil" height="50px" width="50px"></a>
         <ul> 
           <li><a href="menuSemaine.html">Menu semaine</a></li>
 
@@ -34,7 +35,7 @@
 
     <div class="res">
         <form id="reservation-form">
-    <label for="start">Reserver pour le:</label>
+    <label for="start">Reserver pour le :</label>
 
     <input type="date" id="start" name="dateRes" min="2018-01-01" max="2024-12-31" />
     <button type="submit" id="submit-button">Valider</button>
@@ -46,42 +47,6 @@
     <footer>
 
     </footer>
-
-
-
-    <script>// date du jour auto
-        document.addEventListener('DOMContentLoaded', function () {
-          
-          var dateInput = document.getElementById('start');
-      
-          
-          var currentDate = new Date().toISOString().split('T')[0];
-      
-         
-          dateInput.value = currentDate;
-        });
-      </script>
-
-<script>//affichage message res
-    document.addEventListener('DOMContentLoaded', function () {
-      var form = document.getElementById('reservation-form');
-      var dateInput = document.getElementById('start');
-      var messageElement = document.getElementById('reservation-message');
-  
-      form.addEventListener('submit', function (e) {
-        e.preventDefault(); 
-  
-        
-        var selectedDate = dateInput.value;
-  
-        
-        messageElement.textContent = "Vous avez réservé pour le : " + selectedDate;
-        messageElement.style.display = 'block'; 
-      });
-    });
-  </script>
-  
-
 
 </body>
 </html>

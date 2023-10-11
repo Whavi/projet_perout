@@ -5,7 +5,7 @@
   margin-top: 80px;
   justify-content: center;
   text-align: center; 
-  background-color: #fff;
+  background-color: rgb(51, 51, 51);
   border: 1px solid #ccc; 
   border-radius: 4px; 
   padding: 20px; 
@@ -17,12 +17,13 @@
 label {
   display: block;
   margin-bottom: 10px; 
+  color:#fff;
 }
 
 
 input[type="date"] {
   width: 100%;
-  padding: 8px;
+  padding: 8px 0px 8px 0px;
   font-size: 1rem; 
   border: 1px solid #ccc; 
   border-radius: 4px;
@@ -71,5 +72,5 @@ button:active {
   text-align: center; 
   margin-top: 10px; 
   font-size: 20px;
-  color: #000000; 
+  color: #fff; 
 }
