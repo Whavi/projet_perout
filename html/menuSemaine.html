@@ -1,90 +1,82 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/menuSemaine.css">
     <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/menuSemaine.css">
-    <title>Cantine Scolaire ENC</title>
+    <script src="../js/menuSemaine.js" defer></script>
 </head>
 <body>
-  <div class = content>
+  <div class="content">
     <div class="bar">
-      <nav class="nav">
-        <a href="menuSemaine.html"><img src="../img/logo_enc.png" alt="Accueil" height="50px" width="50px"></a>
-          <ul> 
-            <li><a href="menuSemaine.html">Menu semaine</a></li>
-
-            <li><a href="paiement.html">Paiement</a></li>
-
-            <li><a href="reservation.html">Réservation</a></li>
-
-            <li><a href="info.html">Informations</a></li>
-
-            <li><a href="login.html">Compte</a></li>
-
-            <li><a href="aide.html">Aide</a></li>
-             
-            <li class="deco" ><a class="active"href="index.html">Déconnexion</a></li>
-          </ul>
-      </nav>
+        <nav class="nav">
+          <a href="menuSemaine.html"><img src="../img/logo_enc.png" alt="Accueil" height="50px" width="50px"></a>
+            <ul> 
+              <li><a href="menuSemaine.html">Menu semaine</a></li>
+  
+              <li><a href="paiement.html">Paiement</a></li>
+  
+              <li><a href="reservation.html">Réservation</a></li>
+  
+              <li><a href="info.html">Informations</a></li>
+  
+              <li><a href="index.html">Compte</a></li>
+  
+              <li><a href="aide.html">Aide</a></li>
+               
+              <li class="deco" ><a class="active"href="login.html">Déconnexion</a></li>
+            </ul>
+        </nav>
     </div>
+</div>
 
-
-    <div class="menuTable">
-        <table>
-            <caption>Menu de la semaine </caption>
-            <thead>
-                <tr>
-                  <td>&nbsp;</td>
-                  <td>Lundi</td>
-                  <td>Mardi</td>
-                  <td>Mercredi</td>
-                  <td>Jeudi</td>
-                  <td>Vendredi</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td>Entrée</td>
-                  <td>Salade de pomme de terre</td>
-                  <td>Salade + vinaigrette</td>
-                  <td>Tartine de foie gras</td>
-                  <td>Taboulet au 7 saisons</td>
-                  <td>Salade de pâte</td>
-                </tr>
-                <tr>
-                  <td>Plat</td>
-                  <td>Riz + poisson ou viande</td>
-                  <td>Riz + poisson ou viande</td>
-                  <td>Riz + poisson ou viande</td>
-                  <td>Riz + poisson ou viande</td>
-                  <td>Riz + poisson ou viande</td>
-                </tr>
-                <tr>
-                  <td>Dessert</td>
-                  <td>Yaourt + Fruit ou Gateau</td>
-                  <td>Yaourt + Fruit ou Gateau</td>
-                  <td>Yaourt + Fruit ou Gateau</td>
-                  <td>Yaourt + Fruit ou Gateau</td>
-                  <td>Yaourt + Fruit ou Gateau</td>
-                </tr>
-            </tbody>
-
-          </table>
-
-    </div>
-
-    <div class="navigation">
-        <a href="#">&#8592; Menu précedant</a>
-        <a href="#">Menu suivant &#8594;</a>
-    </div>
-
-
-
-    <footer>
-
-    </footer>
+<div class="content_menu">
+    <div id="menu-container">
+      
+        <h1>Menu de la semaine</h1>
+    
+      <div class="jour">
+        <div class="day" onmouseover="showMenu('lundi')" onmouseout="hideMenu('lundi')">
+            <h2>Lundi</h2>
+            <ul id="lundi" class="dropdown">
+                <li>Entrée : Salade verte</li>
+                <li>Plat principal : Poulet rôti</li>
+                <li>Dessert : Crème caramel</li>
+            </ul>
+        </div>
+        <div class="day" onmouseover="showMenu('mardi')" onmouseout="hideMenu('mardi')">
+            <h2>Mardi</h2>
+            <ul id="mardi" class="dropdown">
+                <li>Entrée : Soupe de légumes</li>
+                <li>Plat principal : Spaghetti bolognaise</li>
+                <li>Dessert : Tarte aux pommes</li>
+            </ul>
+        </div>
+        <div class="day" onmouseover="showMenu('mercredi')" onmouseout="hideMenu('mercredi')">
+            <h2>Mercredi</h2>
+            <ul id="mercredi" class="dropdown">
+                <li>Entrée : Tomates mozzarella</li>
+                <li>Plat principal : Poisson grillé</li>
+                <li>Dessert : Mousse au chocolat</li>
+            </ul>
+        </div>
+        <div class="day" onmouseover="showMenu('jeudi')" onmouseout="hideMenu('jeudi')">
+            <h2>Jeudi</h2>
+            <ul id="jeudi" class="dropdown">
+                <li>Entrée : Potage de légumes</li>
+                <li>Plat principal : Filet de bœuf aux champignons</li>
+                <li>Dessert : Tiramisu</li>
+            </ul>
+        </div>
+        <div class="day" onmouseover="showMenu('vendredi')" onmouseout="hideMenu('vendredi')">
+            <h2>Vendredi</h2>
+            <ul id="vendredi" class="dropdown">
+                <li>Entrée : César Salad</li>
+                <li>Plat principal : Lasagnes végétariennes</li>
+                <li>Dessert : Crumble aux fruits</li>
+            </ul>
+        </div>
+      </div>
   </div>
+</div> 
 </body>
 </html>
